@@ -1,9 +1,15 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from lists.models import Item, List
 
 
 # Create your views here.
+
+@csrf_exempt
+def method_show(request):
+    return HttpResponse(request.method)
+
 
 def home_page(request):
     return render(request, 'home.html')
