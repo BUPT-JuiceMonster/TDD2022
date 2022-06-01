@@ -5,6 +5,8 @@ import random
 REPO_URL = 'https://github.com/BUPT-JuiceMonster/TDD2022.git'
 env.user = 'lhc'
 env.password = '000928'
+env.host = '139.224.66.172'
+
 
 def deploy():
     site_folder = f'home/{env.user}/sites/{env.host}'
